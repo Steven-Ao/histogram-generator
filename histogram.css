@@ -1,0 +1,92 @@
+body {
+    background-color: #f7bba3;
+    font-family:'Courier New', Courier, monospace;
+}
+
+header {
+  text-indent: 10px;
+  width: 700px;
+  font-size: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+header input {
+  text-indent: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+table, header {
+  border-collapse: collapse;
+  border: 5px solid black;
+  table-layout: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 800px;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+th {
+  border: 1px solid black;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+}
+
+progress {
+  height: 20px;
+  border-radius: 5px;
+  border-color: red;
+  margin-right: 20%;
+  width: 100%;
+  background-color: green;
+  background: green;
+  opacity: 0;
+}
+
+input[type=text] {
+  margin-left: 0;
+  max-width: 50px;
+  float: right;
+  text-align: right;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+td strong {
+  text-align: center;
+}
+
+#students {
+  font-size: large;
+}
+
+.mid {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.small {
+  width: 50px;
+  background-color: rgb(244, 190, 129);
+  text-align: center;
+  border-right: 0;
+}
+
+#bgcolor {
+  background-color: rgb(244, 190, 129);
+}
+
+#worst, #best, #average, #med {
+  text-align: center;
+}
+
+table {
+  border-radius: 10px;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./histogram.css">
+    <script src="./calculate.js" type="text/javascript" defer></script>
+    <title>Histogram Generator</title>
+</head>
+<body>
+  <header>
+    <form>
+      <label for="grades"><b>Histogram Generator</b><br></label>
+      <input type="file" id="grades" name="file" accept=".csv">
+    </form>
+  </header>
+  <section>
+    <table>
+      <tr>
+        <th class="small">Settings</th>
+        <th class="small">Bounds</th>
+        <th id="bgcolor">Histogram</th>
+        <th class="small">Frequency</th>
+      </tr>
+      <tr>
+        <td>Max</td>
+        <td>
+          <form onsubmit="return false">
+              <label for="max"></label>
+              <input type="text" id="max" value="100.00" required>
+          </form>
+        </td>
+        <td id="students"></td>
+        <td id="quantity"></td>
+      </tr>
+      <tr>
+          <td>A+</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-1"></label>
+                <input type="text" id="val-1" value="95.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-1"></progress></td>
+          <td><strong id="count-1"></strong></td>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-2"></label>
+                <input type="text" id="val-2" value="90.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-2"></progress></td>
+          <td><strong id="count-2"></strong></td>
+        </tr>
+        <tr>
+          <td>A-</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-3"></label>
+                <input type="text" id="val-3" value="85.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-3"></progress></td>
+          <td><strong id="count-3"></strong></td>
+        </tr>
+        <tr>
+          <td>B+</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-4"></label>
+                <input type="text" id="val-4" value="80.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-4"></progress></td>
+          <td><strong id="count-4"></strong></td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-5"></label>
+                <input type="text" id="val-5" value="75.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-5"></progress></td>
+          <td><strong id="count-5"></strong></td>
+        </tr>
+        <tr>
+          <td>B-</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-6"></label>
+                <input type="text" id="val-6" value="70.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-6"></progress></td>
+          <td><strong id="count-6"></strong></td>
+        </tr>
+        <tr>
+          <td>C+</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-7"></label>
+                <input type="text" id="val-7" value="65.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-7"></progress></td>
+          <td><strong id="count-7"></strong></td>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-8"></label>
+                <input type="text" id="val-8" value="60.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-8"></progress></td>
+          <td><strong id="count-8"></strong></td>
+        </tr>
+        <tr>
+          <td>C-</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-9"></label>
+                <input type="text" id="val-9" value="55.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-9"></progress></td>
+          <td><strong id="count-9"></strong></td>
+        </tr>
+        <tr>
+          <td>D</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-10"></label>
+                <input type="text" id="val-10" value="50.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-10"></progress></td>
+          <td><strong id="count-10"></strong></td>
+        </tr>
+        <tr>
+          <td>F</td>
+          <td>
+            <form onsubmit="return false">
+                <label for="val-11"></label>
+                <input type="text" id="val-11" value="0.00" required>
+            </form>
+          </td>
+          <td><progress id="grade-11"></progress></td>
+          <td><strong id="count-11"></strong></td>
+        </tr>
+    </table>
+    <table>
+      <tr>
+        <th class="small">Statistics</th>
+        <th class="small"></th>
+      </tr>
+      <tr>
+        <td class="mid">Highest: </td>
+        <td id="best">0</td>
+      </tr>
+      <tr>
+        <td class="mid">Lowest: </td>
+        <td id="worst">0</td></tr>
+      <tr>
+        <td class="mid">Mean: </td>
+        <td id="average">0</td>
+      </tr>
+      <tr>
+        <td class="mid">Median: </td>
+        <td id="med">0</td>
+      </tr>
+    </table>
+  </section>
+</body>
+</html>
